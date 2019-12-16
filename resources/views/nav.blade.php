@@ -51,6 +51,10 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('gopost')}}">post</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('student')}}">students</a>
+          </li>
+        
         </ul>
       </div>
     </div>
