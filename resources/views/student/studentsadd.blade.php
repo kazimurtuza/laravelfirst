@@ -7,7 +7,12 @@
 <a  href="{{route('viewstudent')}}" class="btn btn-danger">view students</a>
 
 <div class="container" class="bg-danger">
-
+<!-- error detected -->
+<!-- @foreach($errors->all() as $e)
+<ol>
+<li>{{$e}}</li>
+</ol>
+@endforeach -->
 
 
 <form action="{{route('storestudent')}}" method="post">
@@ -15,16 +20,25 @@
 <div class="form-group">
 <label for="">name</label>
 <input type="text" name="name" class="form-control">
+    @error('name')
+    <div class="text-danger">{{$message}}</div>
+    @enderror
 </div>
 
 <div class="form-group">
 <label for="">email</label>
 <input type="text" name="email" class="form-control">
+@error('email')
+<div class="text-danger">{{$message}}</div>
+@enderror
 </div>
 
 <div class="form-group">
 <label for="">phone</label>
 <input type="text" name="phon" class="form-control">
+@error('phon')
+<div class="text-danger">{{$message}}</div>
+@enderror
 </div>
 
 <div class="form-group">
